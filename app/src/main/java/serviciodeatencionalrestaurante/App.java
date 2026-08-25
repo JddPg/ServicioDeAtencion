@@ -19,18 +19,23 @@ public class App {
         while (true) {
             
             temp = fila.remove();
+            
+            
 
             temp--;
             minutosTranscurridos++;
 
-            if (temp == 0 & kaux == 0) {
+            
+
+            if (temp == 0 && kaux == 0) {
                 break;
             }
 
             if (temp > 0) {
                 fila.add(temp);
-                kaux--;
+                
             }
+            kaux--;
 
             if (kaux == -1) {
                 kaux = fila.size() - 1;
@@ -52,10 +57,12 @@ public class App {
         System.out.println("Prueba 1: " + sistema.calcularTiempoEsperaVIP(pedidos1, 2)); // Esperado: 6
         
         int[] pedidos2 = {5, 1, 1, 1};
-        System.out.println("Prueba 2: " + sistema.calcularTiempoEsperaVIP(pedidos2, 0)); // Esperado: 8
+        System.out.println("Prueba 2: " + sistema.calcularTiempoEsperaVIP(pedidos2, 0) ); // Esperado: 8
 
-        
-    
+        int[] pedidos3 = {1, 2, 3, 4, 5};
+        System.out.println("Prueba 3: " + sistema.calcularTiempoEsperaVIP(pedidos3, 2) ); // Esperado: 10
     }
 }
-
+        
+    
+    
